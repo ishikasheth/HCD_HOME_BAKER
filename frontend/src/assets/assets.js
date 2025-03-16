@@ -84,267 +84,263 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
+        menu_name: "Classic Indulgence",
         menu_image: menu_1
     },
     {
-        menu_name: "Rolls",
+        menu_name: "Flavored Temptations",
         menu_image: menu_2
     },
     {
-        menu_name: "Deserts",
+        menu_name: "Chocolate Lovers’ Paradise",
         menu_image: menu_3
     },
     {
-        menu_name: "Sandwich",
+        menu_name: "Healthy and Guilt-Free Bakes",
         menu_image: menu_4
     },
     {
-        menu_name: "Cake",
+        menu_name: " Mini Bites & Cupcake Collection",
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        menu_name: "Cheesecake",
         menu_image: menu_6
     },
     {
-        menu_name: "Pasta",
+        menu_name: "Custom special cakes",
         menu_image: menu_7
-    },
-    {
-        menu_name: "Noodles",
-        menu_image: menu_8
     }]
 
 export const food_list = [
     {
         _id: "1",
-        name: "Greek salad",
+        name: "Rich Chocolate Fudge Cake",
         image: food_1,
         price: 12,
-        description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        description: "A rich and decadent cake with layers of moist chocolate sponge and creamy fudge frosting.",
+        category: "Classic Indulgence"
     },
     {
         _id: "2",
-        name: "Veg salad",
+        name: "Moist Red Velvet Cake",
         image: food_2,
         price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Classic Indulgence"
     }, {
         _id: "3",
-        name: "Clover Salad",
+        name: "Classic Vanilla Cake",
         image: food_3,
         price: 16,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Classic Indulgence"
     }, {
         _id: "4",
-        name: "Chicken Salad",
+        name: "Black Forest Delight",
         image: food_4,
         price: 24,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Salad"
+        category: "Classic Indulgence"
     }, {
         _id: "5",
-        name: "Lasagna Rolls",
+        name: "Butterscotch Caramel Cake",
         image: food_5,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Classic Indulgence"
     }, {
         _id: "6",
-        name: "Peri Peri Rolls",
+        name: "Fresh Strawberry Cream Cake",
         image: food_6,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Flavored Temptations"
     }, {
         _id: "7",
-        name: "Chicken Rolls",
+        name: "Mango Fruit Cake",
         image: food_7,
         price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Flavored Temptations"
     }, {
         _id: "8",
-        name: "Veg Rolls",
+        name: "Blueberry cake",
         image: food_8,
         price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Rolls"
+        category: "Flavored Temptations"
     }, {
         _id: "9",
-        name: "Ripple Ice Cream",
+        name: "Lemon Raspberry Delight",
         image: food_9,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Flavored Temptations"
     }, {
         _id: "10",
-        name: "Fruit Ice Cream",
+        name: "Orange Almond Bliss",
         image: food_10,
         price: 22,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Flavored Temptations"
     }, {
         _id: "11",
-        name: "Jar Ice Cream",
+        name: "Ferrero Rocher Cake",
         image: food_11,
         price: 10,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Chocolate Lovers’ Paradise"
     }, {
         _id: "12",
-        name: "Vanilla Ice Cream",
+        name: "Nutella Hazelnut Cake",
         image: food_12,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Deserts"
+        category: "Chocolate Lovers’ Paradise"
     },
     {
         _id: "13",
-        name: "Chicken Sandwich",
+        name: "Dark Chocolate Truffle",
         image: food_13,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Chocolate Lovers’ Paradise"
     },
     {
         _id: "14",
-        name: "Vegan Sandwich",
+        name: "Chocolate Lava Cake",
         image: food_14,
         price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Chocolate Lovers’ Paradise"
     }, {
         _id: "15",
-        name: "Grilled Sandwich",
+        name: "Oreo Crunch Cake",
         image: food_15,
         price: 16,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Chocolate Lovers’ Paradise"
     }, {
         _id: "16",
-        name: "Bread Sandwich",
+        name: "Whole Wheat Banana Walnut Cake",
         image: food_16,
         price: 24,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Sandwich"
+        category: "Healthy and Guilt-Free Bakes"
     }, {
         _id: "17",
-        name: "Cup Cake",
+        name: "Vegan Chocolate Cake",
         image: food_17,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Healthy and Guilt-Free Bakes"
     }, {
         _id: "18",
-        name: "Vegan Cake",
+        name: "Sugar-Free Almond Cake",
         image: food_18,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Healthy and Guilt-Free Bakes"
     }, {
         _id: "19",
-        name: "Butterscotch Cake",
+        name: "Gluten-Free Carrot Cake",
         image: food_19,
         price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Healthy and Guilt-Free Bakes"
     }, {
         _id: "20",
-        name: "Sliced Cake",
+        name: "Oats and Honey Cake",
         image: food_20,
         price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Cake"
+        category: "Healthy and Guilt-Free Bakes"
     }, {
         _id: "21",
-        name: "Garlic Mushroom ",
+        name: "Red Velvet Cupcakes ",
         image: food_21,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Mini Bites & Cupcake Collection"
     }, {
         _id: "22",
-        name: "Fried Cauliflower",
+        name: "Chocolate Chip Muffins",
         image: food_22,
         price: 22,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Mini Bites & Cupcake Collection"
     }, {
         _id: "23",
-        name: "Mix Veg Pulao",
+        name: "Classic Vanilla Cupcakes",
         image: food_23,
         price: 10,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Mini Bites & Cupcake Collection"
     }, {
         _id: "24",
-        name: "Rice Zucchini",
+        name: "Brownie Bites",
         image: food_24,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pure Veg"
+        category: "Mini Bites & Cupcake Collection"
     },
     {
         _id: "25",
-        name: "Cheese Pasta",
+        name: "Mini Cheesecakes",
         image: food_25,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Mini Bites & Cupcake Collection"
     },
     {
         _id: "26",
-        name: "Tomato Pasta",
+        name: "Classic New York Cheesecake",
         image: food_26,
         price: 18,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Cheesecake Heaven"
     }, {
         _id: "27",
-        name: "Creamy Pasta",
+        name: "Blueberry Cheesecake",
         image: food_27,
         price: 16,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Cheesecake Heaven"
     }, {
         _id: "28",
-        name: "Chicken Pasta",
+        name: "Strawberry Swirl Cheesecake",
         image: food_28,
         price: 24,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Pasta"
+        category: "Cheesecake Heaven"
     }, {
         _id: "29",
-        name: "Buttter Noodles",
+        name: "Chocolate Marble Cheesecake",
         image: food_29,
         price: 14,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Cheesecake Heaven"
     }, {
         _id: "30",
-        name: "Veg Noodles",
+        name: "Biscoff Lotus Cheesecake",
         image: food_30,
         price: 12,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Cheesecake Heaven"
     }, {
         _id: "31",
-        name: "Somen Noodles",
+        name: "Anniversary Cakes, Baby Shower Cakes, Customized Photo Cake",
         image: food_31,
         price: 20,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Custom Special Cakes"
     }, {
         _id: "32",
-        name: "Cooked Noodles",
+        name: "Birthday Theme Cakes",
         image: food_32,
         price: 15,
         description: "Food provides essential nutrients for overall health and well-being",
-        category: "Noodles"
+        category: "Custom Special Cakes"
     }
 ]
