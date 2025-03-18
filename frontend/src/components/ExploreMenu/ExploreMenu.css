@@ -52,3 +52,8 @@
     background-color: #e2e2e2;
     border: none;
 }
+
+.explore-menu-list-item .active{
+    border: 5px solid #7c4a36;
+    padding: 2px;
+}
