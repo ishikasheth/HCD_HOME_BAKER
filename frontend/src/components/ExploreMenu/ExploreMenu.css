@@ -75,7 +75,7 @@
 }
 
 .explore-menu-list-item .active {
-    border: 5px solid #ff6f61;
+    border: 5px solid rgb(79, 13, 13);
     padding: 2px;
 }
 
