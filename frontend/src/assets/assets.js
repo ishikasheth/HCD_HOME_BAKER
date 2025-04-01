@@ -100,7 +100,7 @@ export const menu_list = [
         menu_image: menu_4
     },
     {
-        menu_name: " Mini Bites & Cupcake Collection",
+        menu_name: " Mini Bites & Cupcakes",
         menu_image: menu_5
     },
     {
@@ -110,6 +110,10 @@ export const menu_list = [
     {
         menu_name: "Custom special cakes",
         menu_image: menu_7
+    },
+    {
+        menu_name: "Bouquets and Chocolates",
+        menu_image: menu_8
     }]
 
 export const food_list = [

@@ -71,11 +71,11 @@
 }
 
 .explore-menu-list-item:hover p {
-    color: rgb(79, 13, 13); /* Change text color on hover */
+    color: #77624E; /* Change text color on hover */
 }
 
 .explore-menu-list-item .active {
-    border: 5px solid rgb(79, 13, 13);
+    border: 5px solid #77624E;
     padding: 2px;
 }
 

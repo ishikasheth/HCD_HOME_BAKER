@@ -31,7 +31,7 @@
 }
 
 .navbar-menu li:hover {
-    color: turquoise; /* Change color on hover */
+    color: rgb(102, 27, 27); /* Change color on hover */
 }
 
 .navbar-menu li:before {
@@ -39,7 +39,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: turquoise;
+    background-color: rgb(102, 27, 27);
     transition: width 0.3s ease; /* Underline transition */
     bottom: 0;
     left: 50%;
@@ -60,7 +60,7 @@
     background: transparent;
     font-size: 16px;
     color: white;
-    border: 1px solid turquoise;
+    border: 1px solid rgb(102, 27, 27);
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
@@ -68,8 +68,8 @@
 }
 
 .navbar button:hover {
-    background-color: turquoise;
-    color: black;
+    background-color: rgb(102, 27, 27);
+    color: white;
     transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -100,7 +100,7 @@
     right: -3px;
     width: 8px;
     height: 8px;
-    background-color: turquoise;
+    background-color: rgb(102, 27, 27);
     border-radius: 50%;
     border: 1px solid white;
     transition: background-color 0.3s ease; /* Smooth transition for dot color */
