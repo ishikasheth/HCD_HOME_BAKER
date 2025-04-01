@@ -1,61 +1,103 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
-    background: url('./header_img.png') no-repeat;
-    background-size: contain;
+    background: url('./header_img.png') no-repeat center center; /* Center the image */
+    background-size: cover; /* Ensure the image covers the entire header */
     position: relative;
+    transition: background 0.5s ease-in-out; /* Smooth background transition */
 }
 
-.header-contents{
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start; /* Align to the left */
     gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
     left: 6vw;
-    animation: fadeIn 3s;
+    animation: fadeIn 3s ease-in-out; /* Smooth fade-in effect */
+    transition: transform 0.5s ease-in-out; /* Smooth content transition */
 }
 
-.header-contents h2{
+.header-contents h2 {
     font-weight: 500;
     color: black;
-    font-size: max(4.5vw,22px);
+    font-size: max(4.5vw, 22px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for better readability */
 }
 
-.header-contents p{
-    color: #FDF5E6;
-    font-size: 1vw;
-    font-size: max(1.5vw,22px);
+.header-contents p {
+    color: #F5E1C8;
+    font-size: max(1.5vw, 22px);
+    line-height: 1.5; /* Improved line spacing for better readability */
+    transition: color 0.3s ease; /* Smooth color change transition */
 }
 
-.header-contents button{
+.header-contents p:hover {
+    color: red; /* Change text color on hover */
+}
+
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
-    font-size: max(1vw,13px);
+    font-size: max(1vw, 13px);
     border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
 }
 
-@media (max-width:1050px){    
-    .header-contents{
+.header-contents button:hover {
+    background-color: #ff9800; /* Orange color on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1050px) {
+    .header-contents {
         max-width: 45%;
     }
+
+    .header-contents h2 {
+        font-size: max(4vw, 20px);
+    }
+
+    .header-contents button {
+        padding: 1.5vw 3vw;
+        font-size: max(1.2vw, 12px);
+    }
 }
 
-@media (max-width:750px){
-    .header-contents{
+@media (max-width: 750px) {
+    .header-contents {
         max-width: 65%;
     }
-    
-    .header-contents p{
-        display: none;
+
+    .header-contents p {
+        display: none; /* Hide the paragraph text for smaller screens */
     }
 
-    .header-contents button{
+    .header-contents h2 {
+        font-size: max(5vw, 20px);
+    }
+
+    .header-contents button {
         padding: 2vw 4vw;
+        font-size: max(1.5vw, 14px);
     }
 }

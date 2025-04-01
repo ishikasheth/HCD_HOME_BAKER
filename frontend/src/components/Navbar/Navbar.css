@@ -3,18 +3,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease; /* Smooth transition for layout adjustments */
 }
 
 .navbar .logo {
     width: 150px;
+    transition: transform 0.3s ease; /* Smooth logo scaling on hover */
+}
+
+.navbar .logo:hover {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 .navbar-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 60px; /* Increased gap between menu items */
     color: white;
     font-size: 18px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth text color change on hover */
+}
+
+.navbar-menu li:hover {
+    color: turquoise; /* Change color on hover */
+}
+
+.navbar-menu li:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: turquoise;
+    transition: width 0.3s ease; /* Underline transition */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-menu li:hover:before {
+    width: 100%; /* Full underline on hover */
 }
 
 .navbar-right {
@@ -31,12 +64,13 @@
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition for button */
 }
 
 .navbar button:hover {
     background-color: turquoise;
     color: black;
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 .navbar .active {
@@ -44,75 +78,87 @@
     border-bottom: 2px solid white;
 }
 
-.navbar li {
-    cursor: pointer;
-}
-
 .navbar-search-icon {
     position: relative;
+    display: inline-block;
+}
+
+.navbar-search-icon img {
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease; /* Add filter transition for hover effects */
+}
+
+.navbar-search-icon img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Brighten image on hover */
 }
 
 .navbar-search-icon .dot {
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
+    top: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
     background-color: turquoise;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: background-color 0.3s ease; /* Smooth transition for dot color */
 }
 
-@media (max-width:1050px) {
-    .navbar .logo{
+.navbar-search-icon .dot:hover {
+    background-color: #ff9800; /* Change color of dot on hover */
+}
+
+@media (max-width: 1050px) {
+    .navbar .logo {
         width: 140px;
     }
 
-    .navbar-menu{
-        gap: 20px;
+    .navbar-menu {
+        gap: 35px;
         font-size: 17px;
-
     }
 
-    .navbar-right{
+    .navbar-right {
         gap: 30px;
     }
 
-    .navbar-right img{
+    .navbar-right img {
         width: 22px;
     }
 
-    .navbar-right button{
+    .navbar-right button {
         padding: 8px 25px;
-    } 
+    }
 }
 
-@media (max-width:900px) {
-    .navbar .logo{
+@media (max-width: 900px) {
+    .navbar .logo {
         width: 120px;
     }
 
-    .navbar-menu{
-        gap: 15px;
+    .navbar-menu {
+        gap: 25px;
         font-size: 16px;
-
     }
 
-    .navbar-right{
+    .navbar-right {
         gap: 20px;
     }
 
-    .navbar-right img{
+    .navbar-right img {
         width: 20px;
     }
 
-    .navbar-right button{
+    .navbar-right button {
         padding: 7px 20px;
         font-size: 15px;
-    } 
+    }
 }
 
-@media (max-width:750px) {
-    .navbar-menu{
+@media (max-width: 750px) {
+    .navbar-menu {
         display: none;
-    }    
+    }
 }
