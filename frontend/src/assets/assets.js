@@ -96,7 +96,7 @@ export const menu_list = [
         menu_image: menu_3
     },
     {
-        menu_name: "Healthy and Guilt-Free Bakes",
+        menu_name: "Brownie's",
         menu_image: menu_4
     },
     {
