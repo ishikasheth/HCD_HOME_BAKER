@@ -1,60 +1,118 @@
-.cart{
+.cart {
     margin-top: 100px;
 }
 
-.cart-items-title{
+/* === Cart Item Titles === */
+.cart-items-title {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
     align-items: center;
     color: grey;
-    font-size: max(1vw,12px);
+    font-size: max(1vw, 12px);
 }
 
-.cart-items-item{
+.cart-items-item {
     margin: 10px 0px;
     color: white;
 }
 
-.cart-items-item img{
+.cart-items-item img {
     width: 95px;
 }
 
-.cart hr{
+.cart hr {
     height: 1px;
     background-color: #e2e2e2;
     border: none;
 }
 
-.cart-items-item .cross{
-    cursor: pointer;    
+.cart-items-item .cross {
+    cursor: pointer;
 }
 
-.cart-bottom{
+/* === Dropdown Styling for Weight & Toppings === */
+.cart-items-item select,
+.cart-toppings select {
+    padding: 6px;
+    font-size: 14px;
+    width: 130px; /* Increased width for better visibility */
+    min-width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Dropdown hover & focus */
+.cart-items-item select:hover,
+.cart-items-item select:focus,
+.cart-toppings select:hover,
+.cart-toppings select:focus {
+    outline: none;
+    border-color: turquoise;
+}
+
+/* === Cake Customization Input === */
+.cart-customization {
+    margin-top: 20px;
+    margin-bottom: 20px; /* Increased space below customization */
+}
+
+.cart-customization textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #222;
+    color: white;
+    resize: none;
+}
+
+/* === Topping Selection Dropdown === */
+.cart-toppings {
+    margin-bottom: 20px; /* Added more spacing below toppings */
+}
+
+/* === Cart Bottom Section === */
+.cart-bottom {
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: max(12vw, 20px);
-
 }
 
-.cart-total{
-    flex: 1;
+/* Reduced width of Cart Total */
+.cart-total {
+    flex: 0.5; /* Reduced width */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.cart-total-details{
+.cart-total h2 {
+    color: turquoise;
+}
+
+.cart-total-details {
     display: flex;
     justify-content: space-between;
     color: white;
 }
 
-.cart-total hr{
+.cart-total hr {
     margin: 10px 0px;
 }
 
-.cart-total button{
+.cart-total button {
     border: none;
     color: black;
     background-color: turquoise;
@@ -64,15 +122,33 @@
     cursor: pointer;
 }
 
-.cart-promocode{
+/* === Customer Assurance Message === */
+.cart-message {
+    flex: 1;
+    text-align: center;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.cart-message p {
+    font-size: 1.2em;
+    color: beige;
+}
+
+/* === Promo Code Section === */
+.cart-promocode {
     flex: 1;
 }
 
-.cart-promocode p{
+.cart-promocode p {
     color: white;
 }
 
-.cart-promocode-input{
+.cart-promocode-input {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -80,14 +156,14 @@
     border-radius: 4px;
 }
 
-.cart-promocode-input input{
+.cart-promocode-input input {
     background: transparent;
     border: none;
     outline: none;
     padding-left: 10px;
 }
 
-.cart-promocode-input button{
+.cart-promocode-input button {
     width: max(10vw, 150px);
     padding: 12px 5px;
     background-color: grey;
@@ -96,13 +172,45 @@
     border-radius: 4px;
 }
 
-@media (max-width:750px) {
-    .cart-bottom{
+/* === Responsive Styles for Mobile === */
+@media (max-width: 750px) {
+    .cart-bottom {
         flex-direction: column-reverse;
-
+        gap: 20px;
     }
 
-    .cart-promocode{
+    .cart-promocode {
         justify-content: start;
+    }
+
+    .cart-items-title {
+        font-size: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    }
+
+    .cart-items-item select {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .cart-customization textarea {
+        font-size: 12px;
+        height: 60px;
+    }
+
+    .cart-toppings select {
+        width: 110px; /* Adjusted width for mobile */
+        font-size: 12px;
+    }
+
+    /* Center Cart Total & Message */
+    .cart-total {
+        width: 90%;
+        flex: 1;
+    }
+
+    .cart-message {
+        width: 90%;
+        flex: 1;
     }
 }

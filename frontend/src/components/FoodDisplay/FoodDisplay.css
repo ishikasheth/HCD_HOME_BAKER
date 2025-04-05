@@ -16,5 +16,25 @@
    
 }
 
+.food-display-cart {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
+.cart-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #8B4513; /* Dark Brown */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
 
+.cart-button:hover {
+    background-color: #A0522D; /* Lighter Brown */
+    transform: scale(1.05);
+}

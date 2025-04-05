@@ -1,8 +1,7 @@
 .header {
     height: 44vw;
     margin: 30px auto;
-    background: url('D:\bakery-app\HCD_HOME_BAKER\frontend\src\assets\header_img.png') no-repeat center center;
-    background-size: cover;
+   
     position: relative;
     transition: background 0.5s ease-in-out;
 }

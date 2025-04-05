@@ -6,14 +6,17 @@ import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 
 const Home = () => {
 
-  const [category,setCategory] = useState("All");
+  const [category, setCategory] = useState("All");
 
 
   return (
     <div>
       <Header/>
-      <ExploreMenu category={category} setCategory={setCategory}/>
-      <FoodDisplay category={category}/>
+      {/* Category Selection */}
+      <ExploreMenu category={category} setCategory={setCategory} />
+
+      {/* Show FoodDisplay only when a category is selected */}
+      {category !== "All" && <FoodDisplay category={category} />}
     </div>
   )
 }
