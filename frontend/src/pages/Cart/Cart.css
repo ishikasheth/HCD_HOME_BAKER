@@ -35,7 +35,7 @@
 .cart-toppings select {
     padding: 6px;
     font-size: 14px;
-    width: 130px; /* Increased width for better visibility */
+    width: 130px;
     min-width: 120px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -45,7 +45,6 @@
     text-align: center;
 }
 
-/* Dropdown hover & focus */
 .cart-items-item select:hover,
 .cart-items-item select:focus,
 .cart-toppings select:hover,
@@ -57,7 +56,7 @@
 /* === Cake Customization Input === */
 .cart-customization {
     margin-top: 20px;
-    margin-bottom: 20px; /* Increased space below customization */
+    margin-bottom: 20px;
 }
 
 .cart-customization textarea {
@@ -74,7 +73,7 @@
 
 /* === Topping Selection Dropdown === */
 .cart-toppings {
-    margin-bottom: 20px; /* Added more spacing below toppings */
+    margin-bottom: 20px;
 }
 
 /* === Cart Bottom Section === */
@@ -84,11 +83,12 @@
     justify-content: space-between;
     align-items: center;
     gap: max(12vw, 20px);
+    flex-wrap: wrap;
 }
 
-/* Reduced width of Cart Total */
+/* === Cart Total Section === */
 .cart-total {
-    flex: 0.5; /* Reduced width */
+    flex: 0.5;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -114,12 +114,22 @@
 
 .cart-total button {
     border: none;
-    color: black;
-    background-color: turquoise;
+    color: white;
+    background: linear-gradient(135deg, #06beb6, #48b1bf);
     width: max(15vw, 200px);
     padding: 12px 0px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(6, 190, 182, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cart-total button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #48b1bf, #06beb6);
+    box-shadow: 0 6px 20px rgba(6, 190, 182, 0.5);
 }
 
 /* === Customer Assurance Message === */
@@ -132,11 +142,35 @@
     font-size: 1.1em;
     color: #fff;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
 .cart-message p {
     font-size: 1.2em;
     color: beige;
+}
+
+.cart-message button {
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #a47551, #d2b48c);
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(164, 117, 81, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cart-message button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #d2b48c, #a47551);
+    box-shadow: 0 6px 20px rgba(164, 117, 81, 0.5);
 }
 
 /* === Promo Code Section === */
@@ -166,10 +200,16 @@
 .cart-promocode-input button {
     width: max(10vw, 150px);
     padding: 12px 5px;
-    background-color: grey;
+    background: linear-gradient(to right, #888, #aaa);
     border: none;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+    background: linear-gradient(to right, #aaa, #888);
 }
 
 /* === Responsive Styles for Mobile === */
@@ -199,18 +239,29 @@
     }
 
     .cart-toppings select {
-        width: 110px; /* Adjusted width for mobile */
+        width: 110px;
         font-size: 12px;
     }
 
-    /* Center Cart Total & Message */
     .cart-total {
         width: 90%;
         flex: 1;
     }
 
+    .cart-total button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+
     .cart-message {
         width: 90%;
         flex: 1;
+    }
+
+    .cart-message button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0px;
     }
 }
