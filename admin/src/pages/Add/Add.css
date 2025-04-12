@@ -1,0 +1,104 @@
+.add {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #4a4a4a;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fef6f0;
+    /* soft cream */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.add-img-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.add-img-upload img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px dashed #d9cfc5;
+    padding: 10px;
+    background-color: #fff7f2;
+    transition: border-color 0.3s ease;
+}
+
+.add-img-upload img:hover {
+    border-color: #d49fa3;
+    /* soft pink */
+}
+
+.name-this-bake,
+.add-bake-description {
+    width: 100%;
+    max-width: 500px;
+}
+
+.name-this-bake input,
+.add-bake-description textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #cfcfcf;
+    width: 100%;
+    background-color: #fffdfc;
+    transition: border-color 0.3s ease;
+}
+
+.name-this-bake input:focus,
+.add-bake-description textarea:focus {
+    outline: none;
+    border-color: #d49fa3;
+}
+
+.add-category-price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.add-category,
+.add-price {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.add-category-price select,
+.add-category-price input {
+    max-width: 160px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fffdfc;
+}
+
+.add-btn {
+    max-width: 160px;
+    border: none;
+    padding: 12px;
+    background-color: #d49fa3;
+    /* muted pink */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+    background-color: #c58d91;
+}

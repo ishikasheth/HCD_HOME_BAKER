@@ -1,15 +1,10 @@
 import foodModel from "../models/foodModel.js";
-import fs from "fs"
+import fs from "fs";
 
-
-// add food items
-
-const addFood = async (req, res) => {
-    // Log the incoming request for debugging
+const addFood = async(req, res) => {
     console.log("Request Body:", req.body);
     console.log("Uploaded File:", req.file);
 
-    // Validate incoming request data
     if (!req.body.name || !req.body.description || !req.body.price || !req.body.category) {
         return res.status(400).json({ success: false, message: "All fields are required." });
     }
@@ -18,8 +13,7 @@ const addFood = async (req, res) => {
         return res.status(400).json({ success: false, message: "No image file uploaded." });
     }
 
-    // Use the filename from the uploaded file
-    let image_filename = req.file.filename;
+    const image_filename = req.file.filename;
 
     const food = new foodModel({
         name: req.body.name,
@@ -38,4 +32,37 @@ const addFood = async (req, res) => {
     }
 };
 
-export {addFood}
+const getFoodList = async(req, res) => {
+    try {
+        const foods = await foodModel.find();
+        res.json({ success: true, data: foods });
+    } catch (error) {
+        console.error("Error fetching food list:", error);
+        res.status(500).json({ success: false, message: "Error fetching food list" });
+    }
+};
+
+// Remove food item
+const removeFood = async(req, res) => {
+    try {
+        const { id } = req.body;
+
+        const food = await foodModel.findById(id);
+        if (!food) {
+            return res.status(404).json({ success: false, message: "Food item not found" });
+        }
+
+        const imagePath = `uploads/${food.image}`;
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath);
+        }
+
+        await foodModel.findByIdAndDelete(id);
+        res.json({ success: true, message: "Food item removed successfully" });
+    } catch (error) {
+        console.error("Error removing food item:", error);
+        res.status(500).json({ success: false, message: "Failed to remove food item" });
+    }
+};
+
+export { addFood, getFoodList, removeFood };

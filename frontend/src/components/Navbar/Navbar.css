@@ -3,35 +3,35 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease; /* Smooth transition for layout adjustments */
+    transition: all 0.3s ease;
 }
 
 .navbar .logo {
     width: 150px;
-    transition: transform 0.3s ease; /* Smooth logo scaling on hover */
+    transition: transform 0.3s ease;
 }
 
 .navbar .logo:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 .navbar-menu {
     display: flex;
     list-style: none;
-    gap: 60px; /* Increased gap between menu items */
+    gap: 60px;
     color: white;
     font-size: 18px;
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease;
 }
 
 .navbar-menu li {
     cursor: pointer;
     position: relative;
-    transition: color 0.3s ease; /* Smooth text color change on hover */
+    transition: color 0.3s ease;
 }
 
 .navbar-menu li:hover {
-    color: rgb(102, 27, 27); /* Change color on hover */
+    color: rgb(102, 27, 27);
 }
 
 .navbar-menu li:before {
@@ -40,14 +40,14 @@
     width: 0;
     height: 2px;
     background-color: rgb(102, 27, 27);
-    transition: width 0.3s ease; /* Underline transition */
+    transition: width 0.3s ease;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .navbar-menu li:hover:before {
-    width: 100%; /* Full underline on hover */
+    width: 100%;
 }
 
 .navbar-right {
@@ -64,13 +64,13 @@
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition for button */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar button:hover {
     background-color: rgb(102, 27, 27);
     color: white;
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 .navbar .active {
@@ -86,12 +86,12 @@
 .navbar-search-icon img {
     width: 35px;
     height: auto;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease; /* Add filter transition for hover effects */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease;
 }
 
 .navbar-search-icon img:hover {
     transform: scale(1.1);
-    filter: brightness(1.2); /* Brighten image on hover */
+    filter: brightness(1.2);
 }
 
 .navbar-search-icon .dot {
@@ -103,31 +103,27 @@
     background-color: rgb(102, 27, 27);
     border-radius: 50%;
     border: 1px solid white;
-    transition: background-color 0.3s ease; /* Smooth transition for dot color */
+    transition: background-color 0.3s ease;
 }
 
 .navbar-search-icon .dot:hover {
-    background-color: #ff9800; /* Change color of dot on hover */
+    background-color: #ff9800;
 }
 
 @media (max-width: 1050px) {
     .navbar .logo {
         width: 140px;
     }
-
     .navbar-menu {
         gap: 35px;
         font-size: 17px;
     }
-
     .navbar-right {
         gap: 30px;
     }
-
     .navbar-right img {
         width: 22px;
     }
-
     .navbar-right button {
         padding: 8px 25px;
     }
@@ -137,20 +133,16 @@
     .navbar .logo {
         width: 120px;
     }
-
     .navbar-menu {
         gap: 25px;
         font-size: 16px;
     }
-
     .navbar-right {
         gap: 20px;
     }
-
     .navbar-right img {
         width: 20px;
     }
-
     .navbar-right button {
         padding: 7px 20px;
         font-size: 15px;
@@ -161,4 +153,86 @@
     .navbar-menu {
         display: none;
     }
+}
+
+
+/* Profile dropdown styling */
+
+.navbar-profile {
+    position: relative;
+}
+
+.navbar-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid turquoise;
+    outline: 2px solid white;
+    list-style: none;
+    color: #2a2a2a;
+    /* dark text */
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* Make dropdown appear on hover */
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: flex;
+}
+
+
+/* Dropdown items */
+
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.navbar-profile-dropdown li:hover {
+    background-color: #fcdede;
+}
+
+
+/* Icon in dropdown list items */
+
+.navbar-profile-dropdown li img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: brightness(0.4);
+    /* Make icon darker */
+    transition: filter 0.3s;
+}
+
+.navbar-profile-dropdown li:hover img {
+    filter: brightness(0.2);
+    /* Darker on hover */
+}
+
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.navbar-profile-dropdown img {
+    width: 20px;
+}
+
+.navbar-profile-dropdown li:hover {
+    color: tomato;
 }

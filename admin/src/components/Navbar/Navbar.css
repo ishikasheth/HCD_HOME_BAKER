@@ -1,0 +1,36 @@
+/* NAVBAR CONTAINER */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+    /* black background */
+    color: white;
+    /* white text/icons if present */
+}
+
+
+/* LOGO IMAGE */
+
+.navbar-logo {
+    width: 120px;
+    /* Set fixed width */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* PROFILE ICON */
+
+.navbar-profile {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    /* optional: white border to stand out */
+}
