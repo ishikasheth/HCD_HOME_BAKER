@@ -4,8 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server.js"
-  },
+  "start": "node server.js"
+}
+,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ishikasheth/HCD_HOME_BAKER.git"
